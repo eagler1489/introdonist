@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- メインアクティビティ -->
+    <string name="app_name">ｲﾝﾄﾛﾄﾞﾆｽﾄ</string>
+    <string name="default_title_test">私以外私じゃないの</string>
+    <string name="button_speech_sample">サンプル発話</string>
+    <string name="button_start_service">サービス開始</string>
+    <string name="button_stop_service">サービス停止</string>
+    <string name="settings">設定</string>
+    <string name="credit">ｸﾚｼﾞｯﾄ</string>
+    <string name="service_title_call">service_title_call</string>
+
+    <!-- クレジットアクティビティ -->
+    <string name="app_name_title">アプリについて</string>
+    <string name="app_name_4_credit">appliname : ｲﾝﾄﾛﾄﾞﾆｽﾄ</string>
+    <string name="app_producer">author : Eagler</string>
+    <string name="app_icon_org_title">アプリのアイコン 編集元データ</string>
+    <string name="app_icon_org_author">author : extravectors</string>
+    <string name="app_icon_org_id">ID : 201406040200</string>
+
+    <!-- 設定アクティビティ -->
+    <string name="preference_title">設定</string>
+    <string name="auto_start_key">auto_start_key</string>
+    <string name="auto_start_title">自動起動</string>
+    <string name="auto_start_summary_on">端末起動時に自動的に起動します</string>
+    <string name="auto_start_summary_off">端末起動時に起動しません</string>
+    <string name="set_notification_key">set_notification_key</string>
+    <string name="set_notification_title">アプリを落ちにくくする</string>
+    <string name="set_notification_summary_on">通知バーに表示されます</string>
+    <string name="set_notification_summary_off">通知バーに表示しません</string>
+    <string name="lower_case_key">lower_case_key</string>
+    <string name="lower_case_title">英字の小文字化</string>
+    <string name="lower_case_summary_on">英字を小文字化します</string>
+    <string name="lower_case_summary_off">英字を小文字化しません</string>
+    <string name="delete_prefix_num_key">delete_prefix_num_key</string>
+    <string name="delete_prefix_num_title">曲名先頭の曲番号削除</string>
+    <string name="delete_prefix_num_summary_on">曲名先頭の曲番号削除(誤作動する場合はオフにしてください)</string>
+    <string name="delete_prefix_num_summary_off">曲名先頭の曲番号を削除しません</string>
+    <string name="what_contents_speech_key">what_contents_speech_key</string>
+    <string name="what_contents_speech_title">どの内容を発話するか</string>
+    <string name="tts_test_key">tts_test_key</string>
+    <string name="tts_test_title">音声合成をテストする</string>
+
+    <!-- サンプル発話アクティビティ -->
+    <string name="sample_artist_title">アーティスト名</string>
+    <string name="sample_artist_key">sample_artist_key</string>
+    <string name="sample_artist_default_value">無名のアーティスト</string>
+    <string name="sample_album_title">アルバム名</string>
+    <string name="sample_album_key">sample_album_key</string>
+    <string name="sample_album_default_value">UNKNOWN ALBUM</string>
+    <string name="sample_title_title">曲名</string>
+    <string name="sample_title_key">sample_title_key</string>
+    <string name="sample_title_default_value">名もなき歌</string>
+
+</resources>

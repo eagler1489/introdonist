@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jp.co.eagler.nicole.introdonist.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <TextView
+        android:id="@+id/sample_artist"
+        android:text="@string/sample_artist_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:inputType="none"
+        android:enabled="false"
+        android:textSize="12sp" />
+    <EditText
+        android:id="@+id/sample_artist_text"
+        android:text="@string/sample_artist_default_value"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/sample_album"
+        android:text="@string/sample_artist_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:inputType="none"
+        android:enabled="false"
+        android:textSize="12sp" />
+    <EditText
+        android:id="@+id/sample_album_text"
+        android:text="@string/sample_album_default_value"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/sample_title"
+        android:text="@string/sample_title_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:inputType="none"
+        android:enabled="false"
+        android:textSize="12sp" />
+    <EditText
+        android:id="@+id/sample_title_text"
+        android:text="@string/sample_title_default_value"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:inputType="text"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/sample_speech_admob"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#999"
+        android:orientation="vertical" />
+    <Button
+        android:id="@+id/button_speech_sample"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_speech_sample"
+        android:onClick="onClickSpeechTest" />
+
+</LinearLayout>
+

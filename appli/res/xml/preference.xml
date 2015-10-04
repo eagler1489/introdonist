@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preference_title">
+        <!-- 端末起動時の自動起動 -->
+        <CheckBoxPreference
+            android:key="@string/auto_start_key"
+            android:title="@string/auto_start_title"
+            android:defaultValue="true"
+            android:summary="@string/auto_start_summary_on" />
+        <!-- 通知バー表示 -->
+        <CheckBoxPreference
+            android:key="@string/set_notification_key"
+            android:title="@string/set_notification_title"
+            android:defaultValue="false"
+            android:summary="@string/set_notification_summary_on" />
+        <!-- 英字を小文字に変換 -->
+        <CheckBoxPreference
+            android:key="@string/lower_case_key"
+            android:title="@string/lower_case_title"
+            android:defaultValue="true"
+            android:summary="@string/lower_case_summary_on" />
+        <!-- 英字を小文字に変換 -->
+        <CheckBoxPreference
+            android:key="@string/delete_prefix_num_key"
+            android:title="@string/delete_prefix_num_title"
+            android:defaultValue="true"
+            android:summary="@string/delete_prefix_num_summary_on" />
+        <!-- 発話内容選択 -->
+        <MultiSelectListPreference
+            android:key="@string/what_contents_speech_key"
+            android:title="@string/what_contents_speech_title"
+            android:entries="@array/what_contents_speech_entry_name"
+            android:entryValues="@array/what_contents_speech_entry_value_name"
+            android:defaultValue="@array/what_contents_speech_entry_default_value_name" />
+        <!-- テストボタン -->
+        <Preference
+            android:persistent="false"
+            android:key="@string/tts_test_key"
+            android:title="@string/tts_test_title">
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

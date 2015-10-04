@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="what_contents_speech_entry_name">
+        <item>アーティスト名</item>
+        <item>アルバム名</item>
+        <item>曲名</item>
+    </string-array>
+    <string-array name="what_contents_speech_entry_value_name">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="what_contents_speech_entry_default_value_name">
+        <item>2</item>
+    </string-array>
+</resources>

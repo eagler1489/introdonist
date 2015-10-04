@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#ff0000ff</color>
+    <color name="dark_blue">#ff000080</color>
+    <color name="dark_green">#ff006400</color>
+    <color name="lemon_chiffon">#fffffacd</color>
+    <color name="ivory">#fffffff0</color>
+</resources>
