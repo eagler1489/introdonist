@@ -712,20 +712,24 @@ containing a value of this type.
         public static final int lower_case_summary_off=0x7f070046;
         public static final int lower_case_summary_on=0x7f070045;
         public static final int lower_case_title=0x7f070044;
+        public static final int pause_music_key=0x7f07004b;
+        public static final int pause_music_summary_off=0x7f07004e;
+        public static final int pause_music_summary_on=0x7f07004d;
+        public static final int pause_music_title=0x7f07004c;
         /**  設定アクティビティ 
          */
         public static final int preference_title=0x7f07003a;
-        public static final int sample_album_default_value=0x7f070054;
-        public static final int sample_album_key=0x7f070053;
-        public static final int sample_album_title=0x7f070052;
-        public static final int sample_artist_default_value=0x7f070051;
-        public static final int sample_artist_key=0x7f070050;
+        public static final int sample_album_default_value=0x7f070058;
+        public static final int sample_album_key=0x7f070057;
+        public static final int sample_album_title=0x7f070056;
+        public static final int sample_artist_default_value=0x7f070055;
+        public static final int sample_artist_key=0x7f070054;
         /**  サンプル発話アクティビティ 
          */
-        public static final int sample_artist_title=0x7f07004f;
-        public static final int sample_title_default_value=0x7f070057;
-        public static final int sample_title_key=0x7f070056;
-        public static final int sample_title_title=0x7f070055;
+        public static final int sample_artist_title=0x7f070053;
+        public static final int sample_title_default_value=0x7f07005b;
+        public static final int sample_title_key=0x7f07005a;
+        public static final int sample_title_title=0x7f070059;
         public static final int service_title_call=0x7f070033;
         public static final int set_notification_key=0x7f07003f;
         public static final int set_notification_summary_off=0x7f070042;
@@ -734,14 +738,14 @@ containing a value of this type.
         public static final int settings=0x7f070031;
         public static final int store_picture_message=0x7f070001;
         public static final int store_picture_title=0x7f070000;
-        public static final int tts_test_key=0x7f07004d;
-        public static final int tts_test_title=0x7f07004e;
+        public static final int tts_test_key=0x7f070051;
+        public static final int tts_test_title=0x7f070052;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */
         public static final int wallet_buy_button_place_holder=0x7f07002b;
-        public static final int what_contents_speech_key=0x7f07004b;
-        public static final int what_contents_speech_title=0x7f07004c;
+        public static final int what_contents_speech_key=0x7f07004f;
+        public static final int what_contents_speech_title=0x7f070050;
     }
     public static final class style {
         /** 

@@ -70,7 +70,7 @@ public class SampleSpeechActivity extends Activity {
         edit.putString(getString(R.string.sample_title_key), title);
         edit.commit();
 
-        new Caller(this).speak(MyPreferenceFragment.getSpeechContents(this, artist, album, title));
+        new Caller(this).speech(MyPreferenceFragment.getSpeechContents(this, artist, album, title));
     }
 
     private void setAdmob() {

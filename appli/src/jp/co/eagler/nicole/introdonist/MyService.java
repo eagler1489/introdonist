@@ -83,10 +83,10 @@ public class MyService extends Service {
 
 //            activeService.bindService(new Intent(aContext, activeService.getClass()), mConnection, BIND_AUTO_CREATE);
 
-            new Caller(aContext).speak("サービスを起動したよ");
+            new Caller(aContext).speech("サービスを起動したよ");
         }
         else {
-            new Caller(aContext).speak("サービスは既に起動しているよ");
+            new Caller(aContext).speech("サービスは既に起動しているよ");
         }
 
         return;
@@ -101,10 +101,10 @@ public class MyService extends Service {
             aContext.stopService(intent);
             activeService = null;
 
-            new Caller(aContext).speak("サービスを停止したよ");
+            new Caller(aContext).speech("サービスを停止したよ");
         }
         else {
-            new Caller(aContext).speak("サービスは既に停止しているよ");
+            new Caller(aContext).speech("サービスは既に停止しているよ");
         }
     }
 
@@ -122,7 +122,7 @@ public class MyService extends Service {
 
 //        activeService.bindService(new Intent(aContext, activeService.getClass()), mConnection, BIND_AUTO_CREATE);
 
-        new Caller(aContext).speak("サービスを再起動したよ");
+        new Caller(aContext).speech("サービスを再起動したよ");
     }
 
     public static synchronized boolean isActive() {

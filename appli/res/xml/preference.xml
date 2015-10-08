@@ -33,6 +33,14 @@
             android:entries="@array/what_contents_speech_entry_name"
             android:entryValues="@array/what_contents_speech_entry_value_name"
             android:defaultValue="@array/what_contents_speech_entry_default_value_name" />
+        <!-- 発話時に一時停止する -->
+        <!--
+        <CheckBoxPreference
+            android:key="@string/pause_music_key"
+            android:title="@string/pause_music_title"
+            android:defaultValue="true"
+            android:summary="@string/pause_music_summary_on" />
+            -->
         <!-- テストボタン -->
         <Preference
             android:persistent="false"

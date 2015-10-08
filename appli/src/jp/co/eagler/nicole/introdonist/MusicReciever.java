@@ -17,6 +17,7 @@ public class MusicReciever extends BroadcastReceiver {
     private String mLastArtist = "";
     private String mLastAlbum= "";
     private String mLastTitle = "";
+//    private String mLastSpeechText = "";
 
     @Override
     public void onReceive(final Context aContext, final Intent aIntent) {
@@ -24,7 +25,7 @@ public class MusicReciever extends BroadcastReceiver {
         if (action.equals(Intent.ACTION_BOOT_COMPLETED)) {
             if (MyPreferenceFragment.isAutoStart(aContext)) {
                 MyService.start(aContext);
-                new Caller(aContext).speak(aContext.getString(R.string.app_name) + "、起動完了したよ");
+                new Caller(aContext).speech(aContext.getString(R.string.app_name) + "、起動完了したよ");
             }
         }
         else if (action.contentEquals(INTENT_GOOGLE_MUSIC_META_CHANGED)) {
@@ -81,7 +82,9 @@ public class MusicReciever extends BroadcastReceiver {
         }
 
         if( aTitle != null ) {
-            new Caller(aContext).speak(MyPreferenceFragment.getSpeechContents(aContext, aArtist, aAlbum, aTitle));
+            String speechText = MyPreferenceFragment.getSpeechContents(aContext, aArtist, aAlbum, aTitle);
+            new Caller(aContext).speech(speechText);
+//            mLastSpeechText = speechText;
 
             mLastArtist = aArtist;
             mLastAlbum = aAlbum;

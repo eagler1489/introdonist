@@ -37,6 +37,10 @@
     <string name="delete_prefix_num_title">曲名先頭の曲番号削除</string>
     <string name="delete_prefix_num_summary_on">曲名先頭の曲番号削除(誤作動する場合はオフにしてください)</string>
     <string name="delete_prefix_num_summary_off">曲名先頭の曲番号を削除しません</string>
+    <string name="pause_music_key">pause_music_key</string>
+    <string name="pause_music_title">曲名発話時の音楽一時停止</string>
+    <string name="pause_music_summary_on">曲名発話時に音楽を一時停止します</string>
+    <string name="pause_music_summary_off">曲名発話時に音楽を一時停止しません</string>
     <string name="what_contents_speech_key">what_contents_speech_key</string>
     <string name="what_contents_speech_title">どの内容を発話するか</string>
     <string name="tts_test_key">tts_test_key</string>
