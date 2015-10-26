@@ -12,7 +12,7 @@
         <CheckBoxPreference
             android:key="@string/set_notification_key"
             android:title="@string/set_notification_title"
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:summary="@string/set_notification_summary_on" />
         <!-- 英字を小文字に変換 -->
         <CheckBoxPreference

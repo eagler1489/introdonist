@@ -23,7 +23,7 @@ import android.preference.PreferenceManager;
  */
 public class MyPreferenceFragment extends PreferenceFragment implements OnSharedPreferenceChangeListener {
     private static final boolean IS_AUTO_START_DEFAULT_VALUE = true;
-    private static final boolean IS_SET_NOTIFICATION_DEFAULT_VALUE = false;
+    private static final boolean IS_SET_NOTIFICATION_DEFAULT_VALUE = true;
     private static final boolean IS_LOWER_CASE_DEFAULT_VALUE = true;
     private static final boolean IS_DELETE_PREFIX_NUM_DEFAULT_VALUE = true;
     private static final Set<String> WHAT_CONTENTS_SPEECH_DEFAULT_VALUE = new HashSet<String>(); {

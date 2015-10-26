@@ -98,9 +98,22 @@ public class Caller implements OnInitListener, OnUtteranceCompletedListener, OnA
 
     @Override
     public void onAudioFocusChange(int focusChange) {
-        if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
+        if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT) {
+            // フォーカス一時ロス
+        }
+        else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+            // フォーカス再獲得
+        }
+        else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+            // フォーカスロス
+            if (mAudioManager != null) {
+                mAudioManager.abandonAudioFocus(this);
+            }
+        }
+        else if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
             // ボリュームを下げます。
-        } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+        }
+        else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
             // ボリュームをノーマルへ戻します
         }
     }
