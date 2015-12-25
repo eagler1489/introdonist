@@ -139,7 +139,12 @@ public class MyPreferenceFragment extends PreferenceFragment implements OnShared
             }
         }
         if (isSpeechTitle) {
-            builder.append(aTitle);
+            String title = aTitle;
+            // 先頭の曲番号削除
+            if (isDeletePrefixNum(aContext)) {
+                title = title.replaceFirst("^[0-3][0-9][\\s\\.\\-_]", "");
+            }
+            builder.append(title);
         }
 
         String ret = builder.toString();
@@ -147,10 +152,6 @@ public class MyPreferenceFragment extends PreferenceFragment implements OnShared
         // 小文字化
         if (isLowerCase(aContext)) {
             ret = ret.toLowerCase(Locale.JAPAN);
-        }
-        // 先頭の曲番号削除
-        if (isDeletePrefixNum(aContext)) {
-            ret = ret.replaceFirst("^[0-3][0-9][\\s\\.\\-]", "");
         }
         return ret;
     }

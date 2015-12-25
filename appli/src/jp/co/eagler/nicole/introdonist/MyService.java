@@ -83,7 +83,7 @@ public class MyService extends Service {
 
 //            activeService.bindService(new Intent(aContext, activeService.getClass()), mConnection, BIND_AUTO_CREATE);
 
-            new Caller(aContext).speech("サービスを起動したよ");
+            new Caller(aContext).speech(aContext.getString(R.string.app_name) + "のサービスを起動したよ");
         }
         else {
             new Caller(aContext).speech("サービスは既に起動しているよ");
@@ -101,7 +101,7 @@ public class MyService extends Service {
             aContext.stopService(intent);
             activeService = null;
 
-            new Caller(aContext).speech("サービスを停止したよ");
+            new Caller(aContext).speech(aContext.getString(R.string.app_name) + "のサービスを停止したよ");
         }
         else {
             new Caller(aContext).speech("サービスは既に停止しているよ");

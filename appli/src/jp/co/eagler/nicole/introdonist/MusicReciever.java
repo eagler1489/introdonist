@@ -25,7 +25,7 @@ public class MusicReciever extends BroadcastReceiver {
         if (action.equals(Intent.ACTION_BOOT_COMPLETED)) {
             if (MyPreferenceFragment.isAutoStart(aContext)) {
                 MyService.start(aContext);
-                new Caller(aContext).speech(aContext.getString(R.string.app_name) + "、起動完了したよ");
+                //new Caller(aContext).speech(aContext.getString(R.string.app_name) + "、起動完了したよ");
             }
         }
         else if (action.contentEquals(INTENT_GOOGLE_MUSIC_META_CHANGED)) {
