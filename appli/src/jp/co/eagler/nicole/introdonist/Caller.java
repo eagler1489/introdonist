@@ -1,15 +1,14 @@
 package jp.co.eagler.nicole.introdonist;
 
-import java.util.HashMap;
-
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.AudioManager.OnAudioFocusChangeListener;
+import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.TextToSpeech.OnInitListener;
-import android.speech.tts.TextToSpeech.OnUtteranceCompletedListener;
+import android.speech.tts.UtteranceProgressListener;
 
-public class Caller implements OnInitListener, OnUtteranceCompletedListener, OnAudioFocusChangeListener {
+public class Caller extends UtteranceProgressListener implements OnInitListener, OnAudioFocusChangeListener {
     enum Status{
         INITING,
         READY,
@@ -25,8 +24,8 @@ public class Caller implements OnInitListener, OnUtteranceCompletedListener, OnA
 
     public Caller(Context aContext) {
         mContext  = aContext;
-        mTts = new TextToSpeech(aContext.getApplicationContext(), this);
-        mAudioManager = (AudioManager) aContext.getSystemService(Context.AUDIO_SERVICE);
+        mTts = new TextToSpeech(mContext.getApplicationContext(), this);
+        mAudioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
 
         int durationHint = AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK;
 
@@ -41,7 +40,7 @@ public class Caller implements OnInitListener, OnUtteranceCompletedListener, OnA
 
     @Override
     public void onInit(int status) {
-        mTts.setOnUtteranceCompletedListener(this);
+        mTts.setOnUtteranceProgressListener(this);
 
         if (status == TextToSpeech.SUCCESS) {
             mStatus = Status.READY;
@@ -57,7 +56,6 @@ public class Caller implements OnInitListener, OnUtteranceCompletedListener, OnA
         }
     }
 
-    @SuppressWarnings("deprecation")
     public synchronized void speech(final String aMsg) {
 
         if (aMsg != null) {
@@ -66,13 +64,8 @@ public class Caller implements OnInitListener, OnUtteranceCompletedListener, OnA
                 mBuffer = aMsg;
                 break;
             case READY:
-                //if (Build.VERSION.SDK_INT < 21) {
-                    HashMap<String, String> params = new HashMap<String, String>();
-                    params.put(TextToSpeech.Engine.KEY_PARAM_VOLUME, String.valueOf(1.0f));
-                    params.put(TextToSpeech.Engine.KEY_PARAM_PAN, String.valueOf(1.0f));
-                    params.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "end of wakeup message ID");
-                    mTts.speak(aMsg, TextToSpeech.QUEUE_FLUSH, params);
-                //}
+                Bundle params = new Bundle();
+                mTts.speak(aMsg, TextToSpeech.QUEUE_FLUSH, params, aMsg);
                 break;
             default:
                 // ignore
@@ -87,13 +80,6 @@ public class Caller implements OnInitListener, OnUtteranceCompletedListener, OnA
 
     public static boolean isCallable(final Context aContext) {
         return (new TextToSpeech(aContext.getApplicationContext(), null).getEngines().size()) > 0;
-    }
-
-    @Override
-    public void onUtteranceCompleted(String utteranceId) {
-        if (mAudioManager != null) {
-            mAudioManager.abandonAudioFocus(this);
-        }
     }
 
     @Override
@@ -116,5 +102,24 @@ public class Caller implements OnInitListener, OnUtteranceCompletedListener, OnA
         else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
             // ボリュームをノーマルへ戻します
         }
+    }
+
+    @Override
+    public void onStart(String utteranceId) {
+        // TODO 自動生成されたメソッド・スタブ
+
+    }
+
+    @Override
+    public void onDone(String utteranceId) {
+        if (mAudioManager != null) {
+            mAudioManager.abandonAudioFocus(this);
+        }
+    }
+
+    @Override
+    public void onError(String utteranceId) {
+        // TODO 自動生成されたメソッド・スタブ
+
     }
 }
